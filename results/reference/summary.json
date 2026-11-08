@@ -1,0 +1,28 @@
+{
+  "rows": 402311,
+  "attack_flows": 52018,
+  "benign_flows": 350293,
+  "threshold": 3.4440622584952507e-06,
+  "macro_f1": 0.9635195550983358,
+  "attack_average_precision": 0.8885187658281537,
+  "confusion_matrix_benign_attack": [
+    [
+      346531,
+      3762
+    ],
+    [
+      2894,
+      49124
+    ]
+  ],
+  "missed_attacks": 2894,
+  "near_miss_definition": "0.5 < error/threshold <= 1 (prediction uses strict >)",
+  "near_misses": 2615,
+  "deep_miss_definition": "error/threshold < 0.1",
+  "deep_misses": 0,
+  "mean_missed_ratio": 0.5481365919270156,
+  "attack_hours": 53,
+  "hours_with_misses": 20,
+  "top_two_hours_missed_share": 0.29440221147201107,
+  "note": "Single checkpoint and inference pass. Time and category associations are descriptive, not causal. No adaptive threshold is evaluated."
+}

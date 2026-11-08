@@ -1,0 +1,168 @@
+cd "/Users/mac/Desktop/VS Projects/GraphIDS-EmbeddingVelocity" && source .venv/bin/activate && uv run main.py --data_dir data/ --config configs/NF-UNSW-NB15-v2.yaml 2>&1 | tee results/baseline/NF-UNSW-NB15-v2.txt
+
+wandb: Tracking run with wandb version 0.23.0
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in /Users/mac/Desktop/VS Projects/GraphIDS-EmbeddingVelocity/wandb/offline-run-20260514_172539-pubtejgr
+/Users/mac/Desktop/VS Projects/GraphIDS-EmbeddingVelocity/utils/dataloaders.py:141: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.train_graph = torch.load(os.path.join(self.processed_dir, "train.pt"))[0]
+/Users/mac/Desktop/VS Projects/GraphIDS-EmbeddingVelocity/utils/dataloaders.py:142: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.val_graph = torch.load(os.path.join(self.processed_dir, "val.pt"))[0]
+/Users/mac/Desktop/VS Projects/GraphIDS-EmbeddingVelocity/utils/dataloaders.py:143: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.test_graph = torch.load(os.path.join(self.processed_dir, "test.pt"))[0]
+Processing dataset NF-UNSW-NB15-v2...
+Done!
+Number of features: 41
+Starting training...
+
+Epochs:   0%|          | 0/100 [00:00<?, ?it/s]
+Epochs:   0%|          | 0/100 [00:49<?, ?it/s, train_loss=1.44, val_loss=0.633, val_pr_auc=0.756]
+Epochs:   1%|          | 1/100 [00:49<1:21:32, 49.42s/it, train_loss=1.44, val_loss=0.633, val_pr_auc=0.756]
+Epochs:   1%|          | 1/100 [01:35<1:21:32, 49.42s/it, train_loss=1.24, val_loss=0.451, val_pr_auc=0.769]
+Epochs:   2%|▏         | 2/100 [01:35<1:17:20, 47.35s/it, train_loss=1.24, val_loss=0.451, val_pr_auc=0.769]
+Epochs:   2%|▏         | 2/100 [02:14<1:17:20, 47.35s/it, train_loss=1.07, val_loss=0.325, val_pr_auc=0.772]
+Epochs:   3%|▎         | 3/100 [02:14<1:10:39, 43.71s/it, train_loss=1.07, val_loss=0.325, val_pr_auc=0.772]
+Epochs:   3%|▎         | 3/100 [02:56<1:10:39, 43.71s/it, train_loss=0.916, val_loss=0.24, val_pr_auc=0.781]
+Epochs:   4%|▍         | 4/100 [02:56<1:08:33, 42.85s/it, train_loss=0.916, val_loss=0.24, val_pr_auc=0.781]
+Epochs:   4%|▍         | 4/100 [03:40<1:08:33, 42.85s/it, train_loss=0.791, val_loss=0.183, val_pr_auc=0.788]
+Epochs:   5%|▌         | 5/100 [03:40<1:08:55, 43.54s/it, train_loss=0.791, val_loss=0.183, val_pr_auc=0.788]
+Epochs:   5%|▌         | 5/100 [04:23<1:08:55, 43.54s/it, train_loss=0.689, val_loss=0.142, val_pr_auc=0.795]
+Epochs:   6%|▌         | 6/100 [04:23<1:07:42, 43.22s/it, train_loss=0.689, val_loss=0.142, val_pr_auc=0.795]
+Epochs:   6%|▌         | 6/100 [05:06<1:07:42, 43.22s/it, train_loss=0.605, val_loss=0.112, val_pr_auc=0.796]
+Epochs:   7%|▋         | 7/100 [05:06<1:06:48, 43.10s/it, train_loss=0.605, val_loss=0.112, val_pr_auc=0.796]
+Epochs:   7%|▋         | 7/100 [05:52<1:06:48, 43.10s/it, train_loss=0.535, val_loss=0.089, val_pr_auc=0.802]
+Epochs:   8%|▊         | 8/100 [05:52<1:07:36, 44.09s/it, train_loss=0.535, val_loss=0.089, val_pr_auc=0.802]
+Epochs:   8%|▊         | 8/100 [06:31<1:07:36, 44.09s/it, train_loss=0.475, val_loss=0.0708, val_pr_auc=0.805]
+Epochs:   9%|▉         | 9/100 [06:31<1:04:35, 42.59s/it, train_loss=0.475, val_loss=0.0708, val_pr_auc=0.805]
+Epochs:   9%|▉         | 9/100 [07:12<1:04:35, 42.59s/it, train_loss=0.424, val_loss=0.0565, val_pr_auc=0.808]
+Epochs:  10%|█         | 10/100 [07:12<1:03:05, 42.06s/it, train_loss=0.424, val_loss=0.0565, val_pr_auc=0.808]
+Epochs:  10%|█         | 10/100 [07:53<1:03:05, 42.06s/it, train_loss=0.38, val_loss=0.0451, val_pr_auc=0.812] 
+Epochs:  11%|█         | 11/100 [07:53<1:01:46, 41.65s/it, train_loss=0.38, val_loss=0.0451, val_pr_auc=0.812]
+Epochs:  11%|█         | 11/100 [08:35<1:01:46, 41.65s/it, train_loss=0.341, val_loss=0.0362, val_pr_auc=0.811]
+Epochs:  12%|█▏        | 12/100 [08:35<1:01:04, 41.64s/it, train_loss=0.341, val_loss=0.0362, val_pr_auc=0.811]
+Epochs:  12%|█▏        | 12/100 [09:19<1:01:04, 41.64s/it, train_loss=0.306, val_loss=0.0292, val_pr_auc=0.813]
+Epochs:  13%|█▎        | 13/100 [09:19<1:01:36, 42.48s/it, train_loss=0.306, val_loss=0.0292, val_pr_auc=0.813]
+Epochs:  13%|█▎        | 13/100 [10:02<1:01:36, 42.48s/it, train_loss=0.276, val_loss=0.0238, val_pr_auc=0.814]
+Epochs:  14%|█▍        | 14/100 [10:02<1:01:00, 42.56s/it, train_loss=0.276, val_loss=0.0238, val_pr_auc=0.814]
+Epochs:  14%|█▍        | 14/100 [10:41<1:01:00, 42.56s/it, train_loss=0.251, val_loss=0.0199, val_pr_auc=0.815]
+Epochs:  15%|█▌        | 15/100 [10:41<58:44, 41.46s/it, train_loss=0.251, val_loss=0.0199, val_pr_auc=0.815]  
+Epochs:  15%|█▌        | 15/100 [11:24<58:44, 41.46s/it, train_loss=0.228, val_loss=0.0168, val_pr_auc=0.816]
+Epochs:  16%|█▌        | 16/100 [11:24<58:39, 41.90s/it, train_loss=0.228, val_loss=0.0168, val_pr_auc=0.816]
+Epochs:  16%|█▌        | 16/100 [12:04<58:39, 41.90s/it, train_loss=0.208, val_loss=0.0144, val_pr_auc=0.818]
+Epochs:  17%|█▋        | 17/100 [12:04<57:29, 41.56s/it, train_loss=0.208, val_loss=0.0144, val_pr_auc=0.818]
+Epochs:  17%|█▋        | 17/100 [12:49<57:29, 41.56s/it, train_loss=0.191, val_loss=0.0126, val_pr_auc=0.82] 
+Epochs:  18%|█▊        | 18/100 [12:49<57:57, 42.41s/it, train_loss=0.191, val_loss=0.0126, val_pr_auc=0.82]
+Epochs:  18%|█▊        | 18/100 [13:32<57:57, 42.41s/it, train_loss=0.175, val_loss=0.0112, val_pr_auc=0.819]
+Epochs:  19%|█▉        | 19/100 [13:32<57:31, 42.61s/it, train_loss=0.175, val_loss=0.0112, val_pr_auc=0.819]
+Epochs:  19%|█▉        | 19/100 [14:20<57:31, 42.61s/it, train_loss=0.16, val_loss=0.0102, val_pr_auc=0.821] 
+Epochs:  20%|██        | 20/100 [14:20<58:55, 44.20s/it, train_loss=0.16, val_loss=0.0102, val_pr_auc=0.821]
+Epochs:  20%|██        | 20/100 [15:01<58:55, 44.20s/it, train_loss=0.146, val_loss=0.00928, val_pr_auc=0.824]
+Epochs:  21%|██        | 21/100 [15:01<57:08, 43.40s/it, train_loss=0.146, val_loss=0.00928, val_pr_auc=0.824]
+Epochs:  21%|██        | 21/100 [15:42<57:08, 43.40s/it, train_loss=0.134, val_loss=0.00861, val_pr_auc=0.825]
+Epochs:  22%|██▏       | 22/100 [15:42<55:22, 42.60s/it, train_loss=0.134, val_loss=0.00861, val_pr_auc=0.825]
+Epochs:  22%|██▏       | 22/100 [16:28<55:22, 42.60s/it, train_loss=0.123, val_loss=0.00806, val_pr_auc=0.827]
+Epochs:  23%|██▎       | 23/100 [16:28<55:51, 43.53s/it, train_loss=0.123, val_loss=0.00806, val_pr_auc=0.827]
+Epochs:  23%|██▎       | 23/100 [17:07<55:51, 43.53s/it, train_loss=0.113, val_loss=0.00764, val_pr_auc=0.828]
+Epochs:  24%|██▍       | 24/100 [17:07<53:35, 42.31s/it, train_loss=0.113, val_loss=0.00764, val_pr_auc=0.828]
+Epochs:  24%|██▍       | 24/100 [17:48<53:35, 42.31s/it, train_loss=0.104, val_loss=0.0073, val_pr_auc=0.83]  
+Epochs:  25%|██▌       | 25/100 [17:48<52:23, 41.91s/it, train_loss=0.104, val_loss=0.0073, val_pr_auc=0.83]
+Epochs:  25%|██▌       | 25/100 [18:29<52:23, 41.91s/it, train_loss=0.0959, val_loss=0.00702, val_pr_auc=0.832]
+Epochs:  26%|██▌       | 26/100 [18:29<51:17, 41.58s/it, train_loss=0.0959, val_loss=0.00702, val_pr_auc=0.832]
+Epochs:  26%|██▌       | 26/100 [19:13<51:17, 41.58s/it, train_loss=0.0883, val_loss=0.00681, val_pr_auc=0.831]
+Epochs:  27%|██▋       | 27/100 [19:13<51:24, 42.25s/it, train_loss=0.0883, val_loss=0.00681, val_pr_auc=0.831]
+Epochs:  27%|██▋       | 27/100 [19:57<51:24, 42.25s/it, train_loss=0.0814, val_loss=0.00663, val_pr_auc=0.835]
+Epochs:  28%|██▊       | 28/100 [19:57<51:22, 42.81s/it, train_loss=0.0814, val_loss=0.00663, val_pr_auc=0.835]
+Epochs:  28%|██▊       | 28/100 [20:44<51:22, 42.81s/it, train_loss=0.075, val_loss=0.00652, val_pr_auc=0.837] 
+Epochs:  29%|██▉       | 29/100 [20:44<52:02, 43.99s/it, train_loss=0.075, val_loss=0.00652, val_pr_auc=0.837]
+Epochs:  29%|██▉       | 29/100 [21:27<52:02, 43.99s/it, train_loss=0.0691, val_loss=0.00639, val_pr_auc=0.841]
+Epochs:  30%|███       | 30/100 [21:27<51:05, 43.79s/it, train_loss=0.0691, val_loss=0.00639, val_pr_auc=0.841]
+Epochs:  30%|███       | 30/100 [22:12<51:05, 43.79s/it, train_loss=0.0638, val_loss=0.00629, val_pr_auc=0.839]
+Epochs:  31%|███       | 31/100 [22:12<50:54, 44.27s/it, train_loss=0.0638, val_loss=0.00629, val_pr_auc=0.839]
+Epochs:  31%|███       | 31/100 [22:51<50:54, 44.27s/it, train_loss=0.0588, val_loss=0.00623, val_pr_auc=0.839]
+Epochs:  32%|███▏      | 32/100 [22:51<48:13, 42.56s/it, train_loss=0.0588, val_loss=0.00623, val_pr_auc=0.839]
+Epochs:  32%|███▏      | 32/100 [23:33<48:13, 42.56s/it, train_loss=0.0542, val_loss=0.00613, val_pr_auc=0.844]
+Epochs:  33%|███▎      | 33/100 [23:33<47:13, 42.28s/it, train_loss=0.0542, val_loss=0.00613, val_pr_auc=0.844]
+Epochs:  33%|███▎      | 33/100 [24:12<47:13, 42.28s/it, train_loss=0.05, val_loss=0.00607, val_pr_auc=0.842]  
+Epochs:  34%|███▍      | 34/100 [24:12<45:42, 41.56s/it, train_loss=0.05, val_loss=0.00607, val_pr_auc=0.842]
+Epochs:  34%|███▍      | 34/100 [24:55<45:42, 41.56s/it, train_loss=0.046, val_loss=0.00605, val_pr_auc=0.843]
+Epochs:  35%|███▌      | 35/100 [24:55<45:27, 41.96s/it, train_loss=0.046, val_loss=0.00605, val_pr_auc=0.843]
+Epochs:  35%|███▌      | 35/100 [25:35<45:27, 41.96s/it, train_loss=0.0425, val_loss=0.006, val_pr_auc=0.843] 
+Epochs:  36%|███▌      | 36/100 [25:35<43:57, 41.21s/it, train_loss=0.0425, val_loss=0.006, val_pr_auc=0.843]
+Epochs:  36%|███▌      | 36/100 [26:14<43:57, 41.21s/it, train_loss=0.0392, val_loss=0.00594, val_pr_auc=0.844]
+Epochs:  37%|███▋      | 37/100 [26:14<42:45, 40.72s/it, train_loss=0.0392, val_loss=0.00594, val_pr_auc=0.844]
+Epochs:  37%|███▋      | 37/100 [26:53<42:45, 40.72s/it, train_loss=0.0361, val_loss=0.00591, val_pr_auc=0.844]
+Epochs:  38%|███▊      | 38/100 [26:53<41:26, 40.11s/it, train_loss=0.0361, val_loss=0.00591, val_pr_auc=0.844]
+Epochs:  38%|███▊      | 38/100 [27:35<41:26, 40.11s/it, train_loss=0.0333, val_loss=0.00588, val_pr_auc=0.846]
+Epochs:  39%|███▉      | 39/100 [27:35<41:24, 40.73s/it, train_loss=0.0333, val_loss=0.00588, val_pr_auc=0.846]
+Epochs:  39%|███▉      | 39/100 [28:16<41:24, 40.73s/it, train_loss=0.0307, val_loss=0.00585, val_pr_auc=0.845]
+Epochs:  40%|████      | 40/100 [28:16<40:46, 40.78s/it, train_loss=0.0307, val_loss=0.00585, val_pr_auc=0.845]
+Epochs:  40%|████      | 40/100 [28:55<40:46, 40.78s/it, train_loss=0.0284, val_loss=0.00583, val_pr_auc=0.841]
+Epochs:  41%|████      | 41/100 [28:55<39:35, 40.27s/it, train_loss=0.0284, val_loss=0.00583, val_pr_auc=0.841]
+Epochs:  41%|████      | 41/100 [29:34<39:35, 40.27s/it, train_loss=0.0263, val_loss=0.00579, val_pr_auc=0.839]
+Epochs:  42%|████▏     | 42/100 [29:34<38:25, 39.74s/it, train_loss=0.0263, val_loss=0.00579, val_pr_auc=0.839]
+Epochs:  42%|████▏     | 42/100 [30:13<38:25, 39.74s/it, train_loss=0.0243, val_loss=0.00577, val_pr_auc=0.839]
+Epochs:  43%|████▎     | 43/100 [30:13<37:32, 39.52s/it, train_loss=0.0243, val_loss=0.00577, val_pr_auc=0.839]
+Epochs:  43%|████▎     | 43/100 [30:59<37:32, 39.52s/it, train_loss=0.0224, val_loss=0.00572, val_pr_auc=0.836]
+Epochs:  44%|████▍     | 44/100 [30:59<38:46, 41.55s/it, train_loss=0.0224, val_loss=0.00572, val_pr_auc=0.836]
+Epochs:  44%|████▍     | 44/100 [31:46<38:46, 41.55s/it, train_loss=0.0208, val_loss=0.0057, val_pr_auc=0.837] 
+Epochs:  45%|████▌     | 45/100 [31:46<39:40, 43.28s/it, train_loss=0.0208, val_loss=0.0057, val_pr_auc=0.837]
+Epochs:  45%|████▌     | 45/100 [32:33<39:40, 43.28s/it, train_loss=0.0193, val_loss=0.00567, val_pr_auc=0.837]
+Epochs:  46%|████▌     | 46/100 [32:33<39:47, 44.21s/it, train_loss=0.0193, val_loss=0.00567, val_pr_auc=0.837]
+Epochs:  46%|████▌     | 46/100 [33:18<39:47, 44.21s/it, train_loss=0.0178, val_loss=0.00564, val_pr_auc=0.841]
+Epochs:  47%|████▋     | 47/100 [33:18<39:19, 44.52s/it, train_loss=0.0178, val_loss=0.00564, val_pr_auc=0.841]
+Epochs:  47%|████▋     | 47/100 [34:01<39:19, 44.52s/it, train_loss=0.0165, val_loss=0.0056, val_pr_auc=0.841] 
+Epochs:  48%|████▊     | 48/100 [34:01<38:13, 44.11s/it, train_loss=0.0165, val_loss=0.0056, val_pr_auc=0.841]
+Epochs:  48%|████▊     | 48/100 [34:40<38:13, 44.11s/it, train_loss=0.0154, val_loss=0.00556, val_pr_auc=0.84]
+Epochs:  49%|████▉     | 49/100 [34:40<36:02, 42.40s/it, train_loss=0.0154, val_loss=0.00556, val_pr_auc=0.84]
+Epochs:  49%|████▉     | 49/100 [35:19<36:02, 42.40s/it, train_loss=0.0143, val_loss=0.00552, val_pr_auc=0.839]
+Epochs:  50%|█████     | 50/100 [35:19<34:36, 41.54s/it, train_loss=0.0143, val_loss=0.00552, val_pr_auc=0.839]
+Epochs:  50%|█████     | 50/100 [35:59<34:36, 41.54s/it, train_loss=0.0133, val_loss=0.00547, val_pr_auc=0.838]
+Epochs:  51%|█████     | 51/100 [35:59<33:30, 41.03s/it, train_loss=0.0133, val_loss=0.00547, val_pr_auc=0.838]
+Epochs:  51%|█████     | 51/100 [36:38<33:30, 41.03s/it, train_loss=0.0124, val_loss=0.00544, val_pr_auc=0.836]
+Epochs:  52%|█████▏    | 52/100 [36:38<32:14, 40.31s/it, train_loss=0.0124, val_loss=0.00544, val_pr_auc=0.836]
+Epochs:  52%|█████▏    | 52/100 [37:16<32:14, 40.31s/it, train_loss=0.0116, val_loss=0.00539, val_pr_auc=0.835]
+Epochs:  53%|█████▎    | 53/100 [37:16<31:09, 39.78s/it, train_loss=0.0116, val_loss=0.00539, val_pr_auc=0.835]
+Epochs:  53%|█████▎    | 53/100 [37:54<31:09, 39.78s/it, train_loss=0.0109, val_loss=0.00535, val_pr_auc=0.836]
+Epochs:  54%|█████▍    | 54/100 [37:54<30:10, 39.35s/it, train_loss=0.0109, val_loss=0.00535, val_pr_auc=0.836]
+Epochs:  54%|█████▍    | 54/100 [38:33<30:10, 39.35s/it, train_loss=0.0102, val_loss=0.00527, val_pr_auc=0.835]
+Epochs:  55%|█████▌    | 55/100 [38:33<29:24, 39.21s/it, train_loss=0.0102, val_loss=0.00527, val_pr_auc=0.835]
+Epochs:  55%|█████▌    | 55/100 [39:15<29:24, 39.21s/it, train_loss=0.00958, val_loss=0.00523, val_pr_auc=0.834]
+Epochs:  56%|█████▌    | 56/100 [39:15<29:17, 39.94s/it, train_loss=0.00958, val_loss=0.00523, val_pr_auc=0.834]
+Epochs:  56%|█████▌    | 56/100 [39:54<29:17, 39.94s/it, train_loss=0.00903, val_loss=0.00517, val_pr_auc=0.837]
+Epochs:  57%|█████▋    | 57/100 [39:54<28:20, 39.54s/it, train_loss=0.00903, val_loss=0.00517, val_pr_auc=0.837]
+Epochs:  57%|█████▋    | 57/100 [40:36<28:20, 39.54s/it, train_loss=0.00851, val_loss=0.00512, val_pr_auc=0.833]
+Epochs:  58%|█████▊    | 58/100 [40:36<28:13, 40.31s/it, train_loss=0.00851, val_loss=0.00512, val_pr_auc=0.833]
+Epochs:  58%|█████▊    | 58/100 [41:22<28:13, 40.31s/it, train_loss=0.00804, val_loss=0.00505, val_pr_auc=0.833]
+Epochs:  58%|█████▊    | 58/100 [41:22<29:57, 42.79s/it, train_loss=0.00804, val_loss=0.00505, val_pr_auc=0.833]
+Early stopping!
+Evaluating on test set...
+wandb: 
+wandb: Run history:
+wandb:        final_test_ap ▁
+wandb:        final_test_f1 ▁
+wandb:    final_test_pr_auc ▁
+wandb:   peak_gpu_memory_mb ▁
+wandb: test_prediction_time ▁
+wandb:       test_threshold ▁
+wandb:           train_loss █▇▆▅▅▄▃▃▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:               val_ap ▁▂▂▃▄▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇▇▇██████▇▇▇███▇▇▇▇▇▇
+wandb:             val_loss █▆▅▄▃▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:           val_pr_auc ▁▂▂▃▄▅▅▅▅▅▆▆▆▆▆▆▇▇▇▇█▇▇█████▇▇██▇▇▇▇▇▇▇▇
+wandb: 
+wandb: Run summary:
+wandb:        final_test_ap 0.83699
+wandb:        final_test_f1 0.95149
+wandb:    final_test_pr_auc 0.83699
+wandb:   peak_gpu_memory_mb 0
+wandb: test_prediction_time 6.69163
+wandb:       test_threshold 0.06039
+wandb:           train_loss 0.00804
+wandb:               val_ap 0.8334
+wandb:             val_loss 0.00505
+wandb:           val_pr_auc 0.8334
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /Users/mac/Desktop/VS Projects/GraphIDS-EmbeddingVelocity/wandb/offline-run-20260514_172539-pubtejgr
+wandb: Find logs at: ./wandb/offline-run-20260514_172539-pubtejgr/logs
+Test macro F1-score: 0.9515
+Test PR-AUC/AP: 0.8370
+Test prediction time: 6.6916 seconds

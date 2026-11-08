@@ -1,0 +1,32 @@
+{
+  "command": [
+    "analysis/run_analysis.py",
+    "checkpoint",
+    "--out",
+    "results/checkpoint_analysis_v1"
+  ],
+  "mode": "checkpoint",
+  "input_path": "/Users/mac/Desktop/VS Projects/GraphIDS-EmbeddingVelocity/results/checkpoint_analysis_v1/aligned_scores.csv",
+  "input_sha256": "5d557c64560d4375e070882df08ccb9e6125e0492da46defddc739b4a5a13288",
+  "script_sha256": "ca30aaa9c3d76e7898544a68b99b8d4f534e8835612c8011af54851a8fb76cb1",
+  "threshold": 3.4440622584952507e-06,
+  "python": "3.12.13",
+  "versions": {
+    "numpy": "1.26.4",
+    "pandas": "3.0.3",
+    "scikit-learn": "1.9.0",
+    "matplotlib": "3.11.0",
+    "torch": "2.4.0",
+    "torch-geometric": "2.6.1"
+  },
+  "provenance": "CSV mode relies on upstream alignment checks; it cannot independently revalidate the raw graph.",
+  "checkpoint_sha256": "d4085f213bb10668052211951daaa8b51a557882d50bec4adcf76056302e920d",
+  "scaler_sha256": "5d0280ffdc0631686f5a4bcb8e6f32939107401fa87a9a1d1cfac41147d16a95",
+  "test_graph_sha256": "2e3fee700c47704b63a7bb02cf46db89f00d9737e67c6aaad91240547f71b506",
+  "raw_csv_sha256": "242a6971cc801eae621b1fc4d966db2cd0af9cc866805f36a6fc5d0058dfbb74",
+  "seed": 24,
+  "fraction": 0.2,
+  "shuffle": true,
+  "num_workers": 0,
+  "device": "cpu"
+}

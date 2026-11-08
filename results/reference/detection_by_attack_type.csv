@@ -1,0 +1,15 @@
+attack_type,total_flows,detected,missed,detection_rate_pct
+Bot,4154,4154,0,100.0
+Brute_Force_-Web,32,32,0,100.0
+Brute_Force_-XSS,9,9,0,100.0
+DDOS_attack-HOIC,20646,20646,0,100.0
+DDOS_attack-LOIC-UDP,69,69,0,100.0
+DDoS_attacks-LOIC-HTTP,5772,5772,0,100.0
+DoS_attacks-GoldenEye,1226,1226,0,100.0
+DoS_attacks-Hulk,2002,2002,0,100.0
+DoS_attacks-SlowHTTPTest,2111,2111,0,100.0
+DoS_attacks-Slowloris,721,721,0,100.0
+FTP-BruteForce,7735,7735,0,100.0
+Infilteration,3763,869,2894,23.093276640977944
+SQL_Injection,8,8,0,100.0
+SSH-Bruteforce,3770,3770,0,100.0

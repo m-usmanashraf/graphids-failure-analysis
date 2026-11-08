@@ -1,0 +1,32 @@
+Last login: Sun May 17 19:05:34 on ttys009
+(base) mac@192 ~ % cd "/Users/mac/Desktop/VS Projects/GraphIDS-EmbeddingVelocity"
+(base) mac@192 GraphIDS-EmbeddingVelocity % grep -i "f1\|pr.auc\|PR-AUC" results/baseline/NF-UNSW-NB15-v3_baseline.txt
+Test Macro F1-score:  0.9998  (99.98%)
+Test PR-AUC:          1.0000  (100.00%)
+Test Macro F1-score:  0.9961  (99.61%)
+Test PR-AUC:          0.9998  (99.98%)
+
+===========================================================================
+Dataset: NF-UNSW-NB15-v3
+Date: 2026-05-14
+Hardware: Mac M1 Pro (CPU)
+Branch: main (PyG implementation)
+
+=== RESULTS ===
+Test Macro F1-score:  0.9998  (99.98%)
+Test PR-AUC:          1.0000  (100.00%)
+Test prediction time: 6.79 seconds
+
+=== PAPER REPORTED ===
+Test Macro F1-score:  0.9961  (99.61%)
+Test PR-AUC:          0.9998  (99.98%)
+
+=== CONFUSION MATRIX ===
+Actual: Benign     | Predicted: Benign     | Count: 223763
+Actual: Benign     | Predicted: Malicious  | Count: 10
+Actual: Malicious  | Predicted: Benign     | Count: 0
+Actual: Malicious  | Predicted: Malicious  | Count: 12770
+
+=== VERDICT ===
+Reproduction successful. Results match and exceed paper values.
+===========================================================================
